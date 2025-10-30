@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Future-ready IT, Cloud, Security, Monitoring, and Web Solutions with instant chatbot support and ticketing system">
+    <title>IT Solutions Hub - Cloud, Security &amp; Web Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <span class="logo-text">IT<span class="logo-accent">Solutions</span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#support" class="nav-link">Support</a></li>
+                <li><a href="#knowledge" class="nav-link">Knowledge Base</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section with 3D Animated Elements -->
+    <section class="hero" id="home">
+        <div class="hero-bg-animation">
+            <div class="floating-cube cube-1"></div>
+            <div class="floating-cube cube-2"></div>
+            <div class="floating-cube cube-3"></div>
+            <div class="floating-cube cube-4"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-title-line">Future-Ready IT Solutions</span>
+                <span class="hero-title-line">For Your Business</span>
+            </h1>
+            <p class="hero-subtitle">Cloud Services • Security • Monitoring • Web Development • 24/7 Support</p>
+            <div class="hero-buttons">
+                <button class="btn-hero btn-primary" onclick="openChatbot()">Get Instant Support</button>
+                <button class="btn-hero btn-secondary" onclick="scrollToSection('services')">Explore Services</button>
+                <button class="btn-hero btn-secondary" onclick="scrollToSection('contact')">Contact Us</button>
+            </div>
+        </div>
+        <div class="mission-statement">
+            <div class="mission-content">
+                <h3>Our Mission</h3>
+                <p>Delivering secure, scalable, and innovative IT solutions that empower businesses to thrive in the digital age. We combine cutting-edge technology with expert support to ensure your success.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Trusted IT Partner Since Day One</h3>
+                    <p>We are a leading provider of comprehensive IT solutions, specializing in cloud infrastructure, cybersecurity, monitoring services, and web development. Our team of certified professionals brings decades of combined experience to deliver enterprise-grade solutions tailored to your business needs.</p>
+                    <p>From server setup and network configuration to MSOC monitoring and custom web applications, we provide end-to-end technology services that drive efficiency, security, and growth.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Clients Served</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Support Available</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-label">Uptime SLA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1755079668/pplx_project_search_images/8bae29a4a4abd8247bdebe1fd75bb824c81373fa.png" alt="IT Solutions Team" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive IT solutions tailored to your business needs</p>
+            <div class="services-grid">
+                <div class="service-card" data-service="cloud">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud Services</h3>
+                    <p>Scalable cloud infrastructure, migration, and management solutions</p>
+                    <button class="service-expand" onclick="toggleService('cloud')">Learn More</button>
+                    <div class="service-details" id="service-cloud">
+                        <ul>
+                            <li>Cloud Migration &amp; Setup</li>
+                            <li>AWS, Azure, Google Cloud</li>
+                            <li>Hybrid Cloud Solutions</li>
+                            <li>Cloud Security &amp; Compliance</li>
+                            <li>Cost Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card" data-service="security">
+                    <div class="service-icon">🔒</div>
+                    <h3>Cybersecurity</h3>
+                    <p>Advanced firewall, threat detection, and security solutions</p>
+                    <button class="service-expand" onclick="toggleService('security')">Learn More</button>
+                    <div class="service-details" id="service-security">
+                        <ul>
+                            <li>Firewall Configuration &amp; Management</li>
+                            <li>Intrusion Detection Systems</li>
+                            <li>Security Audits &amp; Compliance</li>
+                            <li>Data Encryption</li>
+                            <li>Vulnerability Assessments</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card" data-service="monitoring">
+                    <div class="service-icon">📊</div>
+                    <h3>MSOC Monitoring</h3>
+                    <p>24/7 managed security operations and incident response</p>
+                    <button class="service-expand" onclick="toggleService('monitoring')">Learn More</button>
+                    <div class="service-details" id="service-monitoring">
+                        <ul>
+                            <li>Real-time Threat Monitoring</li>
+                            <li>Incident Response Team</li>
+                            <li>Log Analysis &amp; SIEM</li>
+                            <li>Performance Monitoring</li>
+                            <li>Automated Alerting</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card" data-service="web">
+                    <div class="service-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites and web applications built for performance</p>
+                    <button class="service-expand" onclick="toggleService('web')">Learn More</button>
+                    <div class="service-details" id="service-web">
+                        <ul>
+                            <li>Custom Web Development</li>
+                            <li>E-commerce Solutions</li>
+                            <li>Progressive Web Apps</li>
+                            <li>API Development</li>
+                            <li>SEO Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card" data-service="support">
+                    <div class="service-icon">🛠️</div>
+                    <h3>IT Support</h3>
+                    <p>Comprehensive technical support and helpdesk services</p>
+                    <button class="service-expand" onclick="toggleService('support')">Learn More</button>
+                    <div class="service-details" id="service-support">
+                        <ul>
+                            <li>24/7 Technical Support</li>
+                            <li>Remote &amp; On-site Assistance</li>
+                            <li>System Maintenance</li>
+                            <li>Troubleshooting &amp; Repair</li>
+                            <li>User Training</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card" data-service="hardware">
+                    <div class="service-icon">🖥️</div>
+                    <h3>Hardware &amp; Networking</h3>
+                    <p>Server setup, network infrastructure, and hardware solutions</p>
+                    <button class="service-expand" onclick="toggleService('hardware')">Learn More</button>
+                    <div class="service-details" id="service-hardware">
+                        <ul>
+                            <li>Server Installation &amp; Configuration</li>
+                            <li>Network Design &amp; Setup</li>
+                            <li>Hardware Procurement</li>
+                            <li>Data Center Solutions</li>
+                            <li>Cabling &amp; Infrastructure</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Area with Ticket System -->
+    <section class="support-section" id="support">
+        <div class="container">
+            <h2 class="section-title">Get Support</h2>
+            <p class="section-subtitle">Choose your preferred support method</p>
+            <div class="support-tabs">
+                <button class="tab-button active" onclick="switchTab('ticket')">Submit Ticket</button>
+                <button class="tab-button" onclick="switchTab('chat')">Live Chat</button>
+                <button class="tab-button" onclick="switchTab('status')">Track Ticket</button>
+            </div>
+            
+            <!-- Ticket Submission Form -->
+            <div class="tab-content active" id="tab-ticket">
+                <div class="ticket-form-container">
+                    <h3>Submit a Support Ticket</h3>
+                    <p>Our team will respond within 2 hours during business hours</p>
+                    <form class="ticket-form" id="ticketForm" onsubmit="return submitTicket(event)">
+                        <div class="form-group">
+                            <label for="ticketName">Full Name *</label>
+                            <input type="text" id="ticketName" name="name" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="ticketEmail">Email Address *</label>
+                            <input type="email" id="ticketEmail" name="email" required placeholder="your.email@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="ticketPhone">Phone Number *</label>
+                            <input type="tel" id="ticketPhone" name="phone" required placeholder="+1 (555) 000-0000" pattern="[+]?[0-9\s\-\(\)]+">
+                        </div>
+                        <div class="form-group">
+                            <label for="ticketCategory">Category *</label>
+                            <select id="ticketCategory" name="category" required>
+                                <option value="">Select a category</option>
+                                <option value="sales">Sales Inquiry</option>
+                                <option value="cloud">Cloud Support</option>
+                                <option value="security">Firewall &amp; Security</option>
+                                <option value="technical">Technical Help</option>
+                                <option value="website">Website Inquiry</option>
+                                <option value="msoc">MSOC Monitoring</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ticketDescription">Issue Description *</label>
+                            <textarea id="ticketDescription" name="description" required rows="5" placeholder="Please describe your issue in detail..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Submit Ticket</button>
+                    </form>
+                    <div class="ticket-success" id="ticketSuccess">
+                        <div class="success-icon">✓</div>
+                        <h3>Ticket Submitted Successfully!</h3>
+                        <p>Your ticket ID is: <strong id="ticketId"></strong></p>
+                        <p>A confirmation email has been sent to your address.</p>
+                        <p>Our support team will review your request and respond within 2 hours.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Live Chat Tab -->
+            <div class="tab-content" id="tab-chat">
+                <div class="chat-info">
+                    <h3>Live Chat Support</h3>
+                    <p>Click the chat button in the bottom right corner to start a live conversation with our support team.</p>
+                    <p><strong>Available 24/7</strong> for urgent technical issues and general inquiries.</p>
+                    <button class="btn-primary" onclick="openChatbot()">Open Chat Widget</button>
+                </div>
+            </div>
+            
+            <!-- Track Ticket Tab -->
+            <div class="tab-content" id="tab-status">
+                <div class="ticket-tracking">
+                    <h3>Track Your Ticket</h3>
+                    <p>Enter your ticket ID to check the status</p>
+                    <div class="form-group">
+                        <input type="text" id="trackTicketId" placeholder="Enter ticket ID (e.g., TKT-123456)">
+                        <button class="btn-primary" onclick="trackTicket()">Track Ticket</button>
+                    </div>
+                    <div class="ticket-status-result" id="ticketStatusResult"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Knowledge Base Section -->
+    <section class="knowledge-section" id="knowledge">
+        <div class="container">
+            <h2 class="section-title">Knowledge Base</h2>
+            <p class="section-subtitle">Find answers to common questions and download helpful guides</p>
+            
+            <div class="kb-search">
+                <input type="text" id="kbSearch" placeholder="Search for articles, guides, or troubleshooting tips..." onkeyup="searchKnowledgeBase()">
+                <button class="btn-search" onclick="searchKnowledgeBase()">🔍 Search</button>
+            </div>
+            
+            <div class="kb-categories">
+                <button class="kb-filter active" onclick="filterKB('all')">All Articles</button>
+                <button class="kb-filter" onclick="filterKB('getting-started')">Getting Started</button>
+                <button class="kb-filter" onclick="filterKB('troubleshooting')">Troubleshooting</button>
+                <button class="kb-filter" onclick="filterKB('security')">Security</button>
+                <button class="kb-filter" onclick="filterKB('cloud')">Cloud</button>
+            </div>
+            
+            <div class="kb-grid" id="kbGrid">
+                <div class="kb-article" data-category="getting-started" data-title="getting started with cloud services">
+                    <h3>Getting Started with Cloud Services</h3>
+                    <p>Learn how to migrate your infrastructure to the cloud with our step-by-step guide.</p>
+                    <div class="kb-meta">
+                        <span class="kb-category">Getting Started</span>
+                        <a href="#" class="kb-link">Read Article →</a>
+                    </div>
+                </div>
+                <div class="kb-article" data-category="security" data-title="firewall configuration best practices">
+                    <h3>Firewall Configuration Best Practices</h3>
+                    <p>Essential security practices for configuring and managing your firewall infrastructure.</p>
+                    <div class="kb-meta">
+                        <span class="kb-category">Security</span>
+                        <a href="#" class="kb-link">Read Article →</a>
+                    </div>
+                </div>
+                <div class="kb-article" data-category="troubleshooting" data-title="network connectivity issues">
+                    <h3>Resolving Network Connectivity Issues</h3>
+                    <p>Common network problems and their solutions, from DNS to routing issues.</p>
+                    <div class="kb-meta">
+                        <span class="kb-category">Troubleshooting</span>
+                        <a href="#" class="kb-link">Read Article →</a>
+                    </div>
+                </div>
+                <div class="kb-article" data-category="cloud" data-title="optimizing cloud costs">
+                    <h3>Optimizing Cloud Costs</h3>
+                    <p>Strategies to reduce your cloud spending while maintaining performance and reliability.</p>
+                    <div class="kb-meta">
+                        <span class="kb-category">Cloud</span>
+                        <a href="#" class="kb-link">Read Article →</a>
+                    </div>
+                </div>
+                <div class="kb-article" data-category="security" data-title="msoc monitoring setup guide">
+                    <h3>MSOC Monitoring Setup Guide</h3>
+                    <p>Complete guide to setting up and configuring your managed security operations center.</p>
+                    <div class="kb-meta">
+                        <span class="kb-category">Security</span>
+                        <a href="#" class="kb-link">Read Article →</a>
+                    </div>
+                </div>
+                <div class="kb-article" data-category="getting-started" data-title="server setup checklist">
+                    <h3>Server Setup Checklist</h3>
+                    <p>Everything you need to know when setting up a new server environment.</p>
+                    <div class="kb-meta">
+                        <span class="kb-category">Getting Started</span>
+                        <a href="#" class="kb-link">Read Article →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="kb-downloads">
+                <h3>Downloadable Resources</h3>
+                <div class="download-grid">
+                    <div class="download-item">
+                        <div class="download-icon">📄</div>
+                        <div class="download-info">
+                            <h4>Cloud Migration Guide</h4>
+                            <span>PDF - 2.5 MB</span>
+                        </div>
+                        <button class="btn-download" onclick="downloadResource('cloud-migration')">Download</button>
+                    </div>
+                    <div class="download-item">
+                        <div class="download-icon">📄</div>
+                        <div class="download-info">
+                            <h4>Security Best Practices</h4>
+                            <span>PDF - 1.8 MB</span>
+                        </div>
+                        <button class="btn-download" onclick="downloadResource('security-practices')">Download</button>
+                    </div>
+                    <div class="download-item">
+                        <div class="download-icon">📄</div>
+                        <div class="download-info">
+                            <h4>Network Architecture Manual</h4>
+                            <span>PDF - 3.2 MB</span>
+                        </div>
+                        <button class="btn-download" onclick="downloadResource('network-manual')">Download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Get in touch with our team</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Our Offices</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Headquarters</h4>
+                            <p>PUNE<br>Chikhali</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Regional Office</h4>
+                            <p>Mumbai<br></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+18005551234">+91 7744033146</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/18005551234" target="_blank">+91 7744033146</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:support@itsolutions.com">redsapphiretechnologies@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="callback-form-container">
+                    <h3>Request a Callback</h3>
+                    <form class="callback-form" id="callbackForm" onsubmit="return submitCallback(event)">
+                        <div class="form-group">
+                            <label for="callbackName">Name *</label>
+                            <input type="text" id="callbackName" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="callbackPhone">Phone Number *</label>
+                            <input type="tel" id="callbackPhone" required placeholder="Your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="callbackTime">Preferred Time</label>
+                            <select id="callbackTime">
+                                <option value="morning">Morning (9 AM - 12 PM)</option>
+                                <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                                <option value="evening">Evening (5 PM - 8 PM)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="callbackMessage">Message (Optional)</label>
+                            <textarea id="callbackMessage" rows="3" placeholder="Brief description of your inquiry"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Request Callback</button>
+                    </form>
+                    <div class="callback-success" id="callbackSuccess">
+                        <div class="success-icon">✓</div>
+                        <h4>Callback Requested!</h4>
+                        <p>We'll call you back at your preferred time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>IT Solutions Hub</h4>
+                    <p>Your trusted partner for cloud, security, monitoring, and web solutions. Available 24/7 to support your business growth.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="LinkedIn">💼</a>
+                        <a href="#" target="_blank" aria-label="Twitter">🐦</a>
+                        <a href="#" target="_blank" aria-label="Facebook">📘</a>
+                        <a href="#" target="_blank" aria-label="GitHub">🐙</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#knowledge">Knowledge Base</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Cloud Services</a></li>
+                        <li><a href="#services">Cybersecurity</a></li>
+                        <li><a href="#services">MSOC Monitoring</a></li>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">IT Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">GDPR Compliance</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">SLA Agreement</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 IT Solutions Hub. All rights reserved. | Secure. Reliable. Future-Ready.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chatbot Widget -->
+    <div class="chatbot-widget" id="chatbotWidget">
+        <div class="chatbot-header">
+            <h4>IT Support Chat</h4>
+            <button class="chatbot-close" onclick="closeChatbot()" aria-label="Close chat">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatMessages">
+            <div class="bot-message">
+                <strong>Support Bot:</strong> Hello! How can I help you today? Please select a department:
+            </div>
+        </div>
+        <div class="chatbot-departments" id="chatDepartments">
+            <button onclick="selectDepartment('sales')">💼 Sales</button>
+            <button onclick="selectDepartment('cloud')">☁️ Cloud Support</button>
+            <button onclick="selectDepartment('security')">🔒 Firewall &amp; Security</button>
+            <button onclick="selectDepartment('technical')">🛠️ Technical Help</button>
+            <button onclick="selectDepartment('website')">🌐 Website Inquiry</button>
+            <button onclick="selectDepartment('msoc')">📊 MSOC Monitoring</button>
+        </div>
+        <div class="chatbot-input-area" id="chatInputArea" style="display:none;">
+            <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatKeypress(event)">
+            <button onclick="sendChatMessage()">Send</button>
+        </div>
+    </div>
+    <button class="chatbot-toggle" id="chatbotToggle" onclick="toggleChatbot()" aria-label="Open chat support">
+        💬
+    </button>
+
+    <!-- Backend API Documentation Comment -->
+    <!--
+    Backend API Endpoints (Node.js/Express):
+    
+    POST /api/tickets
+    - Create new ticket
+    - Body: { name, email, phone, category, description }
+    - Returns: { ticketId, status, message }
+    - Triggers email to user and support team
+    
+    GET /api/tickets
+    - List all tickets with filters
+    - Query params: ?status=open&category=cloud&page=1
+    - Returns: { tickets: [], total, page }
+    
+    GET /api/tickets/:id
+    - Get specific ticket details
+    - Returns: { ticket: {}, replies: [] }
+    
+    PATCH /api/tickets/:id
+    - Update ticket (status, add reply)
+    - Body: { status, reply, adminId }
+    - Triggers email notification
+    
+    DELETE /api/tickets/:id
+    - Delete ticket (admin only)
+    - Returns: { success: true }
+    
+    Email Integration (SendGrid/Nodemailer):
+    - User confirmation: ticket created, updated, resolved
+    - Support team: new ticket alert, status changes
+    - Templates: HTML formatted with branding
+    
+    Database Schema (PostgreSQL/MongoDB):
+    tickets: {
+      id: string (auto-generated),
+      name: string,
+      email: string,
+      phone: string,
+      category: enum,
+      description: text,
+      status: enum (open, in_progress, resolved, closed),
+      priority: enum (low, medium, high, urgent),
+      assignedTo: string,
+      replies: array,
+      createdAt: timestamp,
+      updatedAt: timestamp
+    }
+    
+    Deployment:
+    - Frontend: Vercel (free tier, HTTPS, CDN, custom domain)
+    - Backend: Render.com or Railway.app (free tier with PostgreSQL)
+    - Alternative: Netlify + Supabase (fully free)
+    -->
+
+    <script src="app.js"></script>
+</body>
+</html>
