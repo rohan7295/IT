@@ -1964,4 +1964,91 @@ body {
   .chatbot-departments {
     grid-template-columns: 1fr;
   }
+  
+  
+}
+/* Work Highlights Section Styles */
+/* Add to your existing style.css file */
+
+.work-highlights-section {
+  background: #fff6f7; /* Very light red background */
+  padding: 42px 0 45px 0;
+}
+
+.work-highlights-section .container {
+  background: #fbeaec; /* Lighter pink/red */
+  border-radius: 15px;
+  box-shadow: 0 0 18px rgba(240, 41, 69, 0.04);
+  border: 1.5px solid #ffe5ea;
+  padding: 34px 24px 40px 24px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.work-highlights-section .section-title {
+  color: #d12739; /* Branded red */
+  font-size: 2em;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.client-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-bottom: 28px;
+}
+
+.client {
+  background: #fff6f7;
+  color: #d12739;
+  padding: 7px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1em;
+  border: 1.5px solid #fad1db;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+.client:hover {
+  background: #ffe5ea;
+  box-shadow: 0 2px 8px rgba(211, 39, 57, 0.09);
+  color: #181818;
+}
+
+.highlight-section {
+  margin-bottom: 28px;
+  padding: 18px 20px 18px 22px;
+  border-left: 4px solid #d12739;
+  background: #fffafb;
+  border-radius: 4px;
+}
+
+.highlight-section h3 {
+  color: #181818; /* Black for emphasis */
+  font-size: 1.14em;
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.highlight-section p {
+  color: #444; /* Slightly lighter than black */
+  font-size: 1em;
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .work-highlights-section .container {
+    padding: 14px 6px 18px 6px;
+  }
+  .work-highlights-section .section-title {
+    font-size: 1.27em;
+  }
+  .highlight-section {
+    padding: 10px 8px 12px 11px;
+  }
 }
